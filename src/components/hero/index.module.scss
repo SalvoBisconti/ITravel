@@ -1,0 +1,35 @@
+.Hero {
+  position: relative;
+  height: 600px;
+  width: 100vw;
+
+  .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 1;
+  }
+  .image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .text {
+    padding: $general-padding;
+    color: $title-light;
+    position: absolute;
+    top: 30%;
+    right: 20%;
+    font-size: 1.7rem;
+    z-index: 2;
+    font-family: $title-font;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .Hero {
+    height: 700px;
+  }
+}

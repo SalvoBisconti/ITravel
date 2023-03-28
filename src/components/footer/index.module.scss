@@ -1,0 +1,26 @@
+.Footer {
+  @include flex-container;
+  height: 250px;
+  background-color: $third-color;
+
+  .listSection {
+    @include flex-container(row, space-around, center);
+    width: 60%;
+    height: 100%;
+  }
+
+  .iconsSection {
+    @include flex-container(column, center, center, 30px);
+    width: 40%;
+    height: 100%;
+
+    .logo {
+      width: 100px;
+    }
+    .socialLogo {
+      @include flex-container(row, center, center, 30px);
+      width: 100%;
+      font-size: 1.6rem;
+    }
+  }
+}

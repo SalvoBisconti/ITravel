@@ -1,0 +1,32 @@
+.Navbar {
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  z-index: 5;
+  background-color: transparent;
+  padding: $general-padding;
+  color: $title-light;
+
+  .list {
+    @include flex-container(row, space-between, center);
+    list-style-type: none;
+    font-weight: bold;
+    li {
+      cursor: pointer;
+    }
+
+    .logo {
+      width: 100px;
+    }
+    .secondList {
+      @include flex-container(row, space-evenly);
+      list-style-type: none;
+      width: 300px;
+    }
+  }
+}
+
+.scrolledNavbar {
+  background-color: $third-color;
+  color: $title-dark;
+}

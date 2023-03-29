@@ -1,7 +1,7 @@
 import styles from "./index.module.scss";
 import Footer from "../../components/footer";
 import HamburgerMenu from "../../components/hamburgerMenu";
-import Navbar from "../../components/navBar";
+import Navbar from "../../components/navbar";
 
 import { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";

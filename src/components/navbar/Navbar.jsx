@@ -1,9 +1,13 @@
 import styles from "./index.module.scss";
 import logo from "../../assets/logo.png";
+import Button from "../button";
+import MenuList from "../menuList/MenuList";
 
-import { Link } from "react-router-dom";
+const Navbar = ({ scroll, openMenu, setOpenMenu }) => {
+  const onHandleMenu = () => {
+    setOpenMenu((prev) => !prev);
+  };
 
-const Navbar = ({ scroll }) => {
   return (
     <div className={`${styles.Navbar} ${scroll && styles.scrolledNavbar}`}>
       <ul className={styles.list}>
@@ -11,22 +15,25 @@ const Navbar = ({ scroll }) => {
           <img src={logo} alt="logo" className={styles.logo} />
         </li>
         <li>
-          <ul className={styles.secondList}>
-            <li>
-              <Link to="/"> Home</Link>
-            </li>
-            <li>
-              <Link to="/about"> Chi siamo</Link>
-            </li>
-            <li>
-              <Link to="/cities"> Città</Link>
-            </li>
-            <li>
-              <Link to="/activities">Attività</Link>
-            </li>
-          </ul>
+          <MenuList listClass={styles.secondList} />
         </li>
-        <li>Utente</li>
+        <ul className={styles.thirdList}>
+          <li>
+            <Button text="Accedi" />
+          </li>
+          <li>
+            <div
+              className={`${styles.hamburgerMenu} ${
+                openMenu && styles.openMenu
+              }`}
+              onClick={onHandleMenu}
+            >
+              <div className={styles.top}> </div>
+              <div className={styles.center}> </div>
+              <div className={styles.bottom}> </div>
+            </div>
+          </li>
+        </ul>
       </ul>
     </div>
   );

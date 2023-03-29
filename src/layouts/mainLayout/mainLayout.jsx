@@ -1,5 +1,6 @@
 import styles from "./index.module.scss";
 import Footer from "../../components/footer";
+import HamburgerMenu from "../../components/hamburgerMenu";
 import Navbar from "../../components/navBar";
 
 import { useState, useEffect } from "react";
@@ -13,9 +14,12 @@ const MainLayout = () => {
     });
   }, []);
 
+  const [openMenu, setOpenMenu] = useState(false);
+
   return (
     <div className={styles.MainLayout}>
-      <Navbar scroll={scroll} />
+      <Navbar scroll={scroll} openMenu={openMenu} setOpenMenu={setOpenMenu} />
+      <HamburgerMenu openMenu={openMenu} setOpenMenu={setOpenMenu} />
       <section>
         <Outlet />
       </section>

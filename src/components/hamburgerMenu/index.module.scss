@@ -1,0 +1,44 @@
+.HamburgerMenu {
+  @include flex-container(column);
+  position: fixed;
+  top: -1000px;
+  height: 100vh;
+  width: 100vw;
+  z-index: 5;
+  translate: all $fastAnimation ease;
+
+  .content {
+    z-index: 7;
+    height: 55%;
+    width: 100%;
+    background-color: $third-color;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+
+    .list {
+      @include flex-container(column, center, center, 40px);
+      height: 100%;
+      list-style-type: none;
+
+      a {
+        text-decoration: none;
+        color: $title-dark;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+      li:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+  .overlay {
+    z-index: 6;
+    background-color: transparent;
+    height: 45%;
+    width: 100%;
+  }
+}
+
+.showMenu {
+  top: 60px;
+}

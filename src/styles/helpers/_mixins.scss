@@ -13,8 +13,8 @@
   flex-wrap: $wrap;
 }
 
-@mixin card-text-title($padding: 0px) {
-  padding: $padding;
-  font-style: normal;
-  color: $secondary-color;
+@mixin section-title() {
+  align-self: self-start;
+  font-weight: bold;
+  font-size: 1.7rem;
 }

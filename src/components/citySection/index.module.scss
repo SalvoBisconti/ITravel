@@ -1,0 +1,16 @@
+.CitySection {
+  @include flex-container(column, center, center, 30px);
+  padding: $general-padding;
+
+  .title {
+    @include section-title;
+  }
+  .cardList {
+    @include flex-container(row, flex-start, flex-start, 30px);
+    width: 80vw;
+    height: auto;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,33 @@
+.City {
+  .hero {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+
+    .background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: $overlay-color;
+      z-index: 1;
+    }
+    .title {
+      position: absolute;
+      z-index: 2;
+      color: $title-light;
+      font-size: 5rem;
+      bottom: 30%;
+      right: 10%;
+    }
+  }
+  .content {
+    padding: $general-padding;
+    font-size: 2rem;
+  }
+}

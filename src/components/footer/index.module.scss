@@ -1,8 +1,8 @@
 .Footer {
   @include flex-container;
-  height: 165px;
+  height: 175px;
   background-color: $third-color;
-  border-top-left-radius: 80px;
+  border-top-left-radius: 70px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 
   .listSection {

@@ -2,6 +2,7 @@ import styles from "./index.module.scss";
 import logo from "../../assets/logo.png";
 import Button from "../button";
 import MenuList from "../menuList/MenuList";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ scroll, openMenu, setOpenMenu }) => {
   const onHandleMenu = () => {
@@ -12,7 +13,10 @@ const Navbar = ({ scroll, openMenu, setOpenMenu }) => {
     <div className={`${styles.Navbar} ${scroll && styles.scrolledNavbar}`}>
       <ul className={styles.list}>
         <li>
-          <img src={logo} alt="logo" className={styles.logo} />
+          <Link to="/">
+            {" "}
+            <img src={logo} alt="logo" className={styles.logo} />
+          </Link>
         </li>
         <li>
           <MenuList listClass={styles.secondList} />

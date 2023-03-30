@@ -2,14 +2,15 @@ import styles from "./index.module.scss";
 import { useState, useEffect } from "react";
 import ActivityCard from "../activityCard/ActivityCard";
 
-import { GET } from "../../utils/http";
+import { activities } from "../../utils/mocks/activitiesMock";
+// import { GET } from "../../utils/http";
 const ActivitySection = () => {
   const [activitiesData, setActivitiesData] = useState([]);
 
   useEffect(() => {
-    GET("activities.json").then(({ data }) =>
-      setActivitiesData(data.filter((activity) => !activity.is_available_today))
-    );
+    // GET("activities.json").then(({ data }) =>
+    setActivitiesData(activities.data.filter((activity) => activity.daily));
+    // );
   }, []);
 
   return (

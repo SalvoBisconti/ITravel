@@ -1,1 +1,3 @@
-
+.Home {
+  @include flex-container(column, center, center);
+}

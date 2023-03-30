@@ -1,0 +1,21 @@
+.InputEl {
+  @include flex-container(row, flex-start, center);
+  margin: 50px 10px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  width: 250px;
+  border-radius: 8px;
+  background-color: white;
+
+  .icon {
+    font-size: 1.3rem;
+    color: $contrast-color;
+    margin-left: 5px;
+  }
+  .input {
+    border: none;
+    background-color: transparent;
+    padding: 10px 12px;
+    outline: none;
+    width: 200px;
+  }
+}

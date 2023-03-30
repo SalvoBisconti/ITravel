@@ -2,13 +2,15 @@ import styles from "../../styles/pages/activity.module.scss";
 
 import ActivityCard from "../../components/activityCard/ActivityCard";
 import { useState, useEffect } from "react";
-import { GET } from "../../utils/http";
+// import { GET } from "../../utils/http";
+import { activities } from "../../utils/mocks/activitiesMock";
 
 export default function Activities() {
   const [allActivitiesData, setAllActivitiesData] = useState([]);
 
   useEffect(() => {
-    GET("activities.json").then(({ data }) => setAllActivitiesData(data));
+    // GET("activities?limit=20").then(({ data }) => setAllActivitiesData(data));
+    setAllActivitiesData(activities.data);
   }, []);
 
   return (

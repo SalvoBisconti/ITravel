@@ -5,7 +5,9 @@ import { activities } from "../../utils/mocks/activitiesMock";
 
 import { useState, useEffect } from "react";
 
-const InputEl = ({ searchValue, setSearchValue }) => {
+const InputEl = () => {
+  const [searchValue, setSearchValue] = useState("");
+
   const navigate = useNavigate();
 
   const [confrontActivityArray, setConfrontActivityArray] = useState([]);
@@ -37,6 +39,7 @@ const InputEl = ({ searchValue, setSearchValue }) => {
           type="text"
           value={searchValue}
           onChange={onHandleInput}
+          placeholder="Inserisci nome città"
           required
         />
       </form>

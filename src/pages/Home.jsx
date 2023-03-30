@@ -11,7 +11,7 @@ export default function Home() {
       <ScrollToTop />
       <Hero />
       <InputEl />
-      <CitySection />
+      {/* <CitySection /> */}
       <ActivitySection />
     </div>
   );

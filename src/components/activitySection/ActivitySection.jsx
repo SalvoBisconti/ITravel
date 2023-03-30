@@ -2,7 +2,7 @@ import styles from "./index.module.scss";
 import { useState, useEffect } from "react";
 import ActivityCard from "../activityCard/ActivityCard";
 
-import { activities } from "../../utils/mocks/activitiesMock";
+import { activities } from "../../mocks/activitiesMock";
 // import { GET } from "../../utils/http";
 const ActivitySection = () => {
   const [activitiesData, setActivitiesData] = useState([]);

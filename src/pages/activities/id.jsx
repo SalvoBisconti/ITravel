@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 // import { GET } from "../../utils/http";
-import { activities } from "../../utils/mocks/activitiesMock";
+import { activities } from "../../mocks/activitiesMock";
 import ScrollToTop from "../../utils/ScrollToTop";
 
 export default function City() {

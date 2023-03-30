@@ -11,11 +11,11 @@ const MenuList = ({ listClass, func }) => {
         <Link to="/about"> Chi siamo</Link>
       </li>
       <li onClick={func}>
-        <Link to="/cities"> Città</Link>
-      </li>
-      <li onClick={func}>
         <Link to="/activities">Attività</Link>
       </li>
+      {/* <li onClick={func}>
+        <Link to="/cities"> Città</Link>
+      </li> */}
     </ul>
   );
 };

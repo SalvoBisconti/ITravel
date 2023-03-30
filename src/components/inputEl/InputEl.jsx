@@ -1,7 +1,7 @@
 import styles from "./index.module.scss";
 import { useNavigate } from "react-router-dom";
 import { FiSearch } from "react-icons/fi";
-import { activities } from "../../utils/mocks/activitiesMock";
+import { activities } from "../../mocks/activitiesMock";
 
 import { useState, useEffect } from "react";
 

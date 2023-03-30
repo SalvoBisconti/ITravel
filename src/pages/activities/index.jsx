@@ -3,7 +3,7 @@ import styles from "../../styles/pages/activity.module.scss";
 import ActivityCard from "../../components/activityCard/ActivityCard";
 import { useState, useEffect } from "react";
 // import { GET } from "../../utils/http";
-import { activities } from "../../utils/mocks/activitiesMock";
+import { activities } from "../../mocks/activitiesMock";
 import ScrollToTop from "../../utils/ScrollToTop";
 
 export default function Activities() {

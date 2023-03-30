@@ -8,7 +8,7 @@ const ActivitySection = () => {
 
   useEffect(() => {
     GET("activities.json").then(({ data }) =>
-      setActivitiesData(data.filter((activity) => activity.is_available_today))
+      setActivitiesData(data.filter((activity) => !activity.is_available_today))
     );
   }, []);
 

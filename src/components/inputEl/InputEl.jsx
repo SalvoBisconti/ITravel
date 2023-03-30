@@ -32,7 +32,7 @@ const InputEl = () => {
 
   return (
     <div className={styles.InputEl}>
-      <FiSearch className={styles.icon} />
+      <FiSearch className={styles.icon} onClick={onHandleSubmit} />
       <form onSubmit={onHandleSubmit} className={styles.form}>
         <input
           className={styles.input}

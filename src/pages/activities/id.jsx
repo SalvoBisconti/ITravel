@@ -19,7 +19,7 @@ export default function City() {
 
   return (
     <div className={styles.Activity}>
-      {singleActivityData.title ? (
+      {singleActivityData?.title ? (
         <>
           <div className={styles.image}>
             <img

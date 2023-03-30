@@ -5,11 +5,11 @@
   height: 100vh;
   width: 100vw;
   z-index: 5;
-  translate: all $fastAnimation ease;
+  translate: transform $fastAnimation ease;
 
   .content {
     z-index: 7;
-    height: 55%;
+    height: 45%;
     width: 100%;
     background-color: $third-color;
     border-bottom-left-radius: 24px;
@@ -34,7 +34,7 @@
   .overlay {
     z-index: 6;
     background-color: transparent;
-    height: 45%;
+    height: 55%;
     width: 100%;
   }
 }

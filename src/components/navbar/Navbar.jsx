@@ -24,7 +24,7 @@ const Navbar = ({ scroll, openMenu, setOpenMenu }) => {
           <li>
             <div
               className={`${styles.hamburgerMenu} ${
-                openMenu && styles.openMenu
+                openMenu && styles.showMenu
               }`}
               onClick={onHandleMenu}
             >

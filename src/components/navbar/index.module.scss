@@ -49,8 +49,8 @@
           width: 100%;
           height: 4px;
           border-radius: 8px;
-          transition: all $fastAnimation ease-in-out;
           background-color: $contrast-color;
+          transition: all $fastAnimation ease-in-out;
         }
         .center {
           background-color: $contrast-color;
@@ -67,22 +67,22 @@
           transition: all $fastAnimation ease-in-out;
         }
       }
-    }
-    .openMenu {
-      .top {
-        width: 60%;
-        height: 4px;
-        border-radius: 8px;
-      }
-      .center {
-        width: 100%;
-        height: 4px;
-        border-radius: 8px;
-      }
-      .bottom {
-        width: 60%;
-        height: 4px;
-        border-radius: 8px;
+      .showMenu {
+        .top {
+          width: 60%;
+          height: 4px;
+          border-radius: 8px;
+        }
+        .center {
+          width: 100%;
+          height: 4px;
+          border-radius: 8px;
+        }
+        .bottom {
+          width: 60%;
+          height: 4px;
+          border-radius: 8px;
+        }
       }
     }
   }

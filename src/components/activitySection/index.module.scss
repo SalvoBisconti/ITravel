@@ -1,0 +1,15 @@
+.ActivitySection {
+  @include flex-container(column, center, center, 30px);
+  padding: $general-padding;
+
+  .title {
+    @include section-title;
+  }
+
+  .cardList {
+    @include flex-container(row, center, center, 30px, wrap);
+
+    height: auto;
+    padding: 10px;
+  }
+}

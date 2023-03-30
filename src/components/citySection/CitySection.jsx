@@ -8,13 +8,13 @@ const CitySection = () => {
 
   useEffect(() => {
     GET("cities.json").then((data) =>
-      setCityData(data.filter((city) => city.top === true))
+      setCityData(data.filter((city) => city.top))
     );
   }, []);
 
   return (
     <div className={styles.CitySection}>
-      <h2 className={styles.title}> Città del momento</h2>
+      <h2 className={styles.title}> Città più gettonate</h2>
       <div className={styles.cardList}>
         {cityData.map((city) => (
           <CityCard key={city.id} data={city} />

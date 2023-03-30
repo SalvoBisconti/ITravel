@@ -9,12 +9,15 @@
     width: 100%;
     background-color: $overlay-color;
     z-index: 1;
+    border-bottom-right-radius: 240px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   }
   .image {
     position: absolute;
     height: 100%;
     width: 100%;
     object-fit: cover;
+    border-bottom-right-radius: 240px;
   }
   .content {
     @include flex-container(column, center, center, 20px);

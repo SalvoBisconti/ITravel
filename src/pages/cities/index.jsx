@@ -3,11 +3,13 @@ import CityCard from "../../components/cityCard";
 import { useState, useEffect } from "react";
 import { GET } from "../../utils/http";
 
+import { cities } from "../../mocks/citiesMock";
 export default function Cities() {
   const [allCitiesData, setAllCitiesData] = useState([]);
 
   useEffect(() => {
-    GET("cities.json").then((data) => setAllCitiesData(data));
+    // GET("cities.json").then((data) => setAllCitiesData(data));
+    setAllCitiesData(cities);
   }, []);
 
   return (

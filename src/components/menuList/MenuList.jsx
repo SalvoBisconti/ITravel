@@ -13,9 +13,9 @@ const MenuList = ({ listClass, func }) => {
       <li onClick={func}>
         <Link to="/activities">Attività</Link>
       </li>
-      {/* <li onClick={func}>
+      <li onClick={func}>
         <Link to="/cities"> Città</Link>
-      </li> */}
+      </li>
     </ul>
   );
 };

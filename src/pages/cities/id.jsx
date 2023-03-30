@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import ScrollToTop from "../../utils/ScrollToTop";
-
+import { cities } from "../../mocks/citiesMock";
 // import { GET } from "../../utils/http";
 
 export default function City() {
@@ -12,14 +12,14 @@ export default function City() {
   const { id } = useParams();
 
   useEffect(() => {
-    GET(`cities/${id}.json`).then((data) => setSingleCityData(data));
+    // GET(`cities/${id}.json`).then((data) => setSingleCityData(data));
+    setSingleCityData(cities.find((city) => city.id == id));
   }, []);
 
   return (
     <div className={styles.City}>
       <ScrollToTop />
-
-      {singleCityData.meta_title ? (
+      {singleCityData?.meta_title ? (
         <>
           <div className={styles.hero}>
             <img

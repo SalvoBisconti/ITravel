@@ -2,6 +2,9 @@ import styles from "./id.module.scss";
 
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+
+import ScrollToTop from "../../utils/ScrollToTop";
+
 // import { GET } from "../../utils/http";
 
 export default function City() {
@@ -14,6 +17,8 @@ export default function City() {
 
   return (
     <div className={styles.City}>
+      <ScrollToTop />
+
       {singleCityData.meta_title ? (
         <>
           <div className={styles.hero}>

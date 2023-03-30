@@ -1,6 +1,5 @@
 .ActivitySection {
   @include flex-container(column, center, center, 30px);
-  padding: $general-padding;
 
   .title {
     @include section-title;

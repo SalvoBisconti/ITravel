@@ -4,6 +4,7 @@ import ActivityCard from "../../components/activityCard/ActivityCard";
 import { useState, useEffect } from "react";
 // import { GET } from "../../utils/http";
 import { activities } from "../../utils/mocks/activitiesMock";
+import ScrollToTop from "../../utils/ScrollToTop";
 
 export default function Activities() {
   const [allActivitiesData, setAllActivitiesData] = useState([]);
@@ -15,6 +16,7 @@ export default function Activities() {
 
   return (
     <div className={styles.Activities}>
+      <ScrollToTop />
       <h1 className={styles.title}>LE NOSTRE ATTRAZIONI</h1>
 
       <div className={styles.cardList}>

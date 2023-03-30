@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 
 // import { GET } from "../../utils/http";
 import { activities } from "../../utils/mocks/activitiesMock";
+import ScrollToTop from "../../utils/ScrollToTop";
 
 export default function City() {
   const [singleActivityData, setsingleActivityData] = useState([]);
@@ -19,6 +20,8 @@ export default function City() {
 
   return (
     <div className={styles.Activity}>
+      <ScrollToTop />
+
       {singleActivityData?.title ? (
         <>
           <div className={styles.image}>

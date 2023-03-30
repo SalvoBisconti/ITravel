@@ -1,6 +1,6 @@
 .Activity {
   @include flex-container(column, center, center);
-  padding: $general-padding;
+  padding: 100px 40px;
 
   .image {
     align-self: center;

@@ -9,19 +9,9 @@ const InputEl = ({ setActivitySearchedArray }) => {
   const [searchValue, setSearchValue] = useState("");
   const navigate = useNavigate();
 
-  const [confrontActivityArray, setConfrontActivityArray] = useState([]);
-
-  useEffect(() => {
-    setConfrontActivityArray(activities.data);
-  }, []);
-
-  // const onHandleSubmit = (e) => {
-  //   e.preventDefault();
-  //   navigate(`/activities/${serchedElement[0]}`);
-  // };
-
   const onHandleSubmit = (e) => {
     e.preventDefault();
+    navigate(`/search/?q=${searchValue}`);
     setActivitySearchedArray(
       activities.data
         .map((element) => {
@@ -31,20 +21,11 @@ const InputEl = ({ setActivitySearchedArray }) => {
         })
         .filter((element) => element !== undefined)
     );
-    navigate(`/search/?q=${searchValue}`);
   };
 
   const onHandleInput = (e) => {
     setSearchValue(() => e.target.value);
   };
-
-  // const serchedElement = confrontActivityArray
-  //   .map((element) => {
-  //     if (element.city.name.toUpperCase().includes(searchValue.toUpperCase())) {
-  //       return element.uuid;
-  //     }
-  //   })
-  //   .filter((element) => element !== undefined);
 
   return (
     <div className={styles.InputEl}>

@@ -5,6 +5,8 @@ import InputEl from "../components/inputEl";
 import { useSearchParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
+import ScrollToTop from "../utils/ScrollToTop";
+
 export default function Search() {
   const [searchParams] = useSearchParams();
   const [activitySearchedArray, setActivitySearchedArray] = useState([]);
@@ -24,6 +26,8 @@ export default function Search() {
 
   return (
     <div className={styles.Search}>
+      <ScrollToTop />
+
       <h1 className={styles.title}>{`Hai cercato ' ${query} ' `}</h1>
       <InputEl
         className={styles.input}

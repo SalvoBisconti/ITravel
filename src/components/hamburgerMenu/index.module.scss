@@ -5,7 +5,7 @@
   height: 100vh;
   width: 100vw;
   z-index: 5;
-  translate: transform $fastAnimation ease;
+  transition: all $mediumAnimation ease;
 
   .content {
     z-index: 7;

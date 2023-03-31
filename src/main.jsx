@@ -7,6 +7,7 @@ import Cities from "./pages/cities";
 import City from "./pages/cities/id";
 import Home from "./pages/Home";
 import MainLayout from "./layouts/mainLayout/mainLayout";
+import Search from "./pages/Search";
 import "./index.css";
 
 import {
@@ -22,6 +23,7 @@ const router = createBrowserRouter(
       <Route path="/" element={<Home />} />
       <Route path="activities" element={<Activities />} />
       <Route path="activities/:id" element={<Activity />} />
+      <Route path="search" element={<Search />} />
       <Route path="cities" element={<Cities />} />
       <Route path="cities/:id" element={<City />} />
       <Route path="about" element={<About />} />

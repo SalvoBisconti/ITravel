@@ -7,28 +7,33 @@ import { useState, useEffect } from "react";
 
 const InputEl = () => {
   const [searchValue, setSearchValue] = useState("");
-
   const navigate = useNavigate();
 
   const [confrontActivityArray, setConfrontActivityArray] = useState([]);
+
   useEffect(() => {
     setConfrontActivityArray(activities.data);
   }, []);
 
+  // const onHandleSubmit = (e) => {
+  //   e.preventDefault();
+  //   navigate(`/activities/${serchedElement[0]}`);
+  // };
+
   const onHandleSubmit = (e) => {
     e.preventDefault();
-    navigate(`/activities/${serchedElement[0]}`);
+    navigate(`/search/?q=${searchValue}`);
   };
 
   const onHandleInput = (e) => setSearchValue(() => e.target.value);
 
-  const serchedElement = confrontActivityArray
-    .map((element) => {
-      if (element.city.name.toUpperCase().includes(searchValue.toUpperCase())) {
-        return element.uuid;
-      }
-    })
-    .filter((element) => element !== undefined);
+  // const serchedElement = confrontActivityArray
+  //   .map((element) => {
+  //     if (element.city.name.toUpperCase().includes(searchValue.toUpperCase())) {
+  //       return element.uuid;
+  //     }
+  //   })
+  //   .filter((element) => element !== undefined);
 
   return (
     <div className={styles.InputEl}>
@@ -39,7 +44,7 @@ const InputEl = () => {
           type="text"
           value={searchValue}
           onChange={onHandleInput}
-          placeholder="Inserisci nome città"
+          placeholder="Inserisci un'attività"
           required
         />
       </form>

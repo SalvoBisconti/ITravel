@@ -5,7 +5,7 @@ import { activities } from "../../mocks/activitiesMock";
 
 import { useState, useEffect } from "react";
 
-const InputEl = () => {
+const InputEl = ({ setActivitySearchedArray }) => {
   const [searchValue, setSearchValue] = useState("");
   const navigate = useNavigate();
 
@@ -22,10 +22,21 @@ const InputEl = () => {
 
   const onHandleSubmit = (e) => {
     e.preventDefault();
+    setActivitySearchedArray(
+      activities.data
+        .map((element) => {
+          if (element.title.toUpperCase().includes(searchValue.toUpperCase())) {
+            return element;
+          }
+        })
+        .filter((element) => element !== undefined)
+    );
     navigate(`/search/?q=${searchValue}`);
   };
 
-  const onHandleInput = (e) => setSearchValue(() => e.target.value);
+  const onHandleInput = (e) => {
+    setSearchValue(() => e.target.value);
+  };
 
   // const serchedElement = confrontActivityArray
   //   .map((element) => {

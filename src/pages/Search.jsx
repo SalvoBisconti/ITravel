@@ -25,6 +25,10 @@ export default function Search() {
   return (
     <div className={styles.Search}>
       <h1 className={styles.title}>{`Hai cercato ' ${query} ' `}</h1>
+      <InputEl
+        className={styles.input}
+        setActivitySearchedArray={setActivitySearchedArray}
+      />
 
       <div className={styles.cardList}>
         {activitySearchedArray.length > 0 ? (
@@ -37,7 +41,6 @@ export default function Search() {
           </p>
         )}
       </div>
-      {console.log(activitySearchedArray)}
     </div>
   );
 }
